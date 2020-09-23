@@ -22,7 +22,7 @@ public class SampleServlet extends HttpServlet{
        String name = optName.isPresent() && !optName.get().isEmpty() ? optName.get() : "";
 
        resp.setStatus(HttpServletResponse.SC_OK);
-       responseWriter.write("Hello" + name + "!");
+       responseWriter.write("Hello " + name + "!");
        responseWriter.flush();
    }
 }

@@ -170,6 +170,11 @@ Las solicitudes **POST**:
 - No tienen restricciones en la longitud de los datos
 
 
+### Parte IV.Frameworks Web MVC – Java Server Faces / Prime Faces
+
+Acceso a la aplicación en la siguiente URL: **http://localhost:8080/faces/calculadora.xhtml**
+
+
 ## REFERENCIAS
 
 - https://tools.ietf.org/html/rfc2616#page-36
