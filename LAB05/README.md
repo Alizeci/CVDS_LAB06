@@ -144,11 +144,11 @@ Cambiando el formulario para que ahora en lugar de POST, use el método GET . Ob
 
 Cuando el usuario ingresa información en un formulario y hace clic en Enviar, hay dos formas en que la información se puede enviar desde el navegador al servidor: en la URL o en el cuerpo de la solicitud HTTP.
 
-### DIFERENCIAS
+### Diferencias
 La diferencia radica en la forma en que cada método envía los datos. **GET** envía los datos usando la URL, indicando el id ingresado, mientras que **POST** los envía de forma que no podemos verlos, ocultos al usuario.
 
 
-### EL MEJOR USO PARA CADA UNO
+### El mejor uso para cada uno
 
 - **GET** cuando desee recuperar datos (OBTENER DATOS).
 - **POST** cuando desee enviar datos (POST DATA).
