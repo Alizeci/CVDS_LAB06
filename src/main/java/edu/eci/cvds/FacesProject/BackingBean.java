@@ -26,6 +26,7 @@ public class BackingBean {
 	}
 	
 	public void calculateValues(String datos) {
+		System.out.println(datosTable.size());
 		datosTable.add(datos);
 	
 		convertToArray(datos);
