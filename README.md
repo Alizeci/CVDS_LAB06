@@ -8,7 +8,7 @@
 
 ## Integración contínua con CircleCI y Heroku
 
-1. Creamos la cuenta en Heroku y enlazamos con Github.
+1. Creamos la cuenta en Heroku y enlazamos con Github .
 
 ## REFERENCIAS
 - https://yosoy.dev/deploy-de-github-a-heroku/
