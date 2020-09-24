@@ -7,18 +7,3 @@ workflows:
   maven_test:
     jobs:
       - maven/test # checkout, build, test, and upload test results
-
-machine:
-  java:
-    version: oraclejdk8
-
-deployment:
-  staging:
-    branch: master
-    heroku: 
-      appname: app-lab06
-
-steps:
-  - run: mvn dependency:go-offline -f pom.xml
-  - run: mvn test
-  - run: mvn site
