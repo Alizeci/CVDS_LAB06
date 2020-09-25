@@ -52,7 +52,7 @@
 			color:black;text-align:center">Datos de la muestra ( separados por , )</h3>
 			<p:inputText id="datos" placeholder="Ingrese los valores" value="#{calculadoraBean.datos}" />
 			
-			<p:panelGrid columns="4">
+			<p:panelGrid columns="4" align="center">
 				<p:outputLabel width="50%" value="Promedio #{calculadoraBean.promedio} "/>
 				<p:outputLabel width="50%" value="DesviacionEstandar #{calculadoraBean.desviacionEstandar}" />
 				<p:outputLabel width="50%" value="Varianza #{calculadoraBean.varianza}" />
@@ -69,13 +69,13 @@
 			</p:dataTable>
 
 			<p:panelGrid columns="2">
-			<p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.calculateValues(calculadoraBean.datos)}" value="Calculo de valores"/>
-			<p:commandButton update="calculadora_form" actionListener="#{calculadoraBean.restart()}" value="Restart"/>
+			<p:commandButton align="center" update="calculadora_form" actionListener="#{calculadoraBean.calculateValues(calculadoraBean.datos)}" value="Calculo de valores"/>
+			<p:commandButton align="center" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" value="Restart"/>
 		</p:panelGrid>	
 		</h:form>
 
-<img src="https://concepto.de/wp-content/uploads/2018/08/Estadistica-inferencial-min-e1533841684477.jpg" alt="Trulli" width="50%" height="170"></img>
-<img src="https://developingthebusiness.com/wp-content/uploads/2018/05/Estadisticas-de-ventas.jpg" alt="Trulli" width="50%" height="170"></img>
+<img src="https://concepto.de/wp-content/uploads/2018/08/Estadistica-inferencial-min-e1533841684477.jpg" alt="Trulli" width="44%" height="170"></img>
+<img src="https://developingthebusiness.com/wp-content/uploads/2018/05/Estadisticas-de-ventas.jpg" alt="Trulli" width="44%" height="170"></img>
 
 	</h:body>
 
