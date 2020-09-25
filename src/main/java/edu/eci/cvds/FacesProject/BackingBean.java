@@ -2,7 +2,7 @@ package edu.eci.cvds.FacesProject;
 
 import java.util.*;
 import javax.enterprise.context.SessionScoped;
-import javax.faces.bean.ApplicationScoped;
+//import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
 
@@ -26,7 +26,6 @@ public class BackingBean {
 	}
 	
 	public void calculateValues(String datos) {
-		System.out.println(datosTable.size());
 		datosTable.add(datos);
 	
 		convertToArray(datos);
