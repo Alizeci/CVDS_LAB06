@@ -5,50 +5,18 @@
 		xmlns:f="http://java.sun.com/jsf/core">
 
 	<h:head>
-		<style>
-		body {background-color: LightSteelBlue;}
-		h1   {color: blue;}
-		p    {color: White;}
-		
-		.center {
-		 text-align: center;
-		border: 3px solid green;
-			}
-			
-		input[type=text] {
-		  width: 100%;
-		  padding: 12px 20px;
-		  margin: 8px 0;
-		  box-sizing: border-box;
-		  border: none;
-		  background-color: #3CBC8D;
-		  color: white;
-		}
-		
-		outputLabel [type=text] {
-		  width: 100%;
-		  padding: 12px 20px;
-		  margin: 8px 0;
-		  box-sizing: border-box;
-		  border: none;
-		  background-color: #3CBC8D;
-		  color: white;
-		}
-		</style>
+		<link rel="stylesheet" href="calStyle.css"></link>
 	</h:head>
 
 	<h:body>
 		<h:form id="calculadora_form" header="Calculadora">	
 			<div class="center">
-			<h1><p align="center" style="font-size:40px;">Calculadora Estadística</p></h1>
-			<h3> <p align="center">James Torres y Laura Izquierdo</p></h3>
-			<img src="https://media.tenor.com/images/de2a9b7bb8147c9c93a0d4e474550fbe/tenor.gif" alt="programing" style="width:120px;height:100px;">
-		</img>
-		</div>
-			<h3> <p align="center">
-			</p></h3>
-			<h3 style="
-			color:black;text-align:center">Datos de la muestra ( separados por , )</h3>
+				<h1><p align="center" style="font-size:200%;">Calculadora Estadística</p></h1>
+				<h2><p align="center" style="font-size:100%;">James Torres y Laura Izquierdo</p></h2>
+				<img src="https://media.tenor.com/images/de2a9b7bb8147c9c93a0d4e474550fbe/tenor.gif" alt="programing" style="width:120px;height:100px;"></img>
+			</div>
+			<h3> <p align="center"></p></h3>
+			<h3 style="color:black;text-align:center">Datos de la muestra ( separados por , )</h3>
 			<p:inputText id="datos" placeholder="Ingrese los valores" value="#{calculadoraBean.datos}" />
 			
 			<p:panelGrid columns="4" style="max-width:500px;margin-left:auto;margin-right:auto; background-color: #3CBC8D">
@@ -56,27 +24,14 @@
 				<p:outputLabel style="font-weight:bold " width="50%" value="DesviacionEstandar #{calculadoraBean.desviacionEstandar}" />
 				<p:outputLabel style="font-weight:bold " width="50%" value="Varianza #{calculadoraBean.varianza}" />
 				<p:outputLabel style="font-weight:bold "  width="50%" value="Moda #{calculadoraBean.moda}"  />
-				
 			</p:panelGrid>
 
-			<p:dataTable var="Historial" value="#{calculadoraBean.datosTable}"> 
-				<p:column>
-					<f:facet name="header"> 
-						<h:outputText value="Historial" />
-					</f:facet>
-					<h:outputText value="#{calculadoraBean.datosTable}" /> 
-				</p:column>
-			</p:dataTable>
-
 			<p:panelGrid columns="2" style="max-width:500px;margin-left:auto;margin-right:auto;">
-			<p:commandButton align="center" style="background-color: #3CBC8D" update="calculadora_form" actionListener="#{calculadoraBean.calculateValues(calculadoraBean.datos)}" value="Calculo de valores"/>
-			<p:commandButton align="center" style="background-color: #3CBC8D" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" value="Restart"/>
-		</p:panelGrid>	
+				<p:commandButton align="center" style="background-color: #3CBC8D" update="calculadora_form" actionListener="#{calculadoraBean.calculateValues(calculadoraBean.datos)}" value="Calculo de valores"/>
+				<p:commandButton align="center" style="background-color: #3CBC8D" update="calculadora_form" actionListener="#{calculadoraBean.restart()}" value="Restart"/>
+			</p:panelGrid>	
 		</h:form>
-
-<img src="https://concepto.de/wp-content/uploads/2018/08/Estadistica-inferencial-min-e1533841684477.jpg" alt="Trulli" width="49%" height="170"></img>
-<img src="https://developingthebusiness.com/wp-content/uploads/2018/05/Estadisticas-de-ventas.jpg" alt="Trulli" width="50%" height="170"></img>
-
+		<img src="https://concepto.de/wp-content/uploads/2018/08/Estadistica-inferencial-min-e1533841684477.jpg" alt="Trulli" width="49%" height="170"></img>
+		<img src="https://developingthebusiness.com/wp-content/uploads/2018/05/Estadisticas-de-ventas.jpg" alt="Trulli" width="50%" height="170"></img>
 	</h:body>
-
 </html>

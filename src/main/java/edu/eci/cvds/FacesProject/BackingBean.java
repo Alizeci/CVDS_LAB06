@@ -13,7 +13,7 @@ import javax.faces.bean.ManagedBean;
 public class BackingBean {
 
 	private ArrayList<Float> datosFloat;
-	private ArrayList<String> datosTable;
+	private static ArrayList<String> datosTable = new ArrayList<>();
 	private String datos;
 	private float promedio;
 	private float desviacionEstandar;
@@ -22,13 +22,12 @@ public class BackingBean {
 	
 	public BackingBean() {
 		datosFloat = new ArrayList<>();
-		datosTable = new ArrayList<>();
 	}
 	
 	public void calculateValues(String datos) {
-		datosTable.add(datos);
-	
 		convertToArray(datos);
+		datosTable.add("["+datos+"]");
+		
 		promedio = calculateMean(datosFloat);
 		desviacionEstandar = calculateStandardDeviation(datosFloat);
 		varianza = calculateVariance(datosFloat);
@@ -36,6 +35,7 @@ public class BackingBean {
 	}
 			
 	public void convertToArray(String datos) {
+		
 		String[] datosCadena =  datos.split(",");
 		for (String s : datosCadena){
 			datosFloat.add(Float.parseFloat(s));	
@@ -157,9 +157,5 @@ public class BackingBean {
 
 	public void setModa(float moda) {
 		this.moda = moda;
-	}
-	
-	public void setDatosTable(ArrayList<String> datosTable) {
-		this.datosTable = datosTable;
 	}
 }
