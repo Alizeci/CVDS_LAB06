@@ -9,6 +9,13 @@
 		body {background-color: LightSteelBlue;}
 		h1   {color: blue;}
 		p    {color: White;}
+		
+		.center {
+		margin: auto;
+		width: 80%;
+		border: 3px solid #73AD21;
+		padding: 10px;
+			}
 		</style>
 	</h:head>
 
@@ -16,7 +23,7 @@
 		<h:form id="calculadora_form" header="Calculadora">			
 			<h1><p align="center" style="font-size:40px;">Calculadora Estadística</p></h1>
 			<h3> <p align="center">James Torres y Laura Izquierdo</p></h3>
-			<h3 style="color:black;text-align:left">Datos de la muestra ( separados por ,)</h3>
+			<h3 style="color:black;text-align:left">Datos de la muestra ( separados por , )</h3>
 
 			<p:inputText id="datos" placeholder="Ingrese los valores" value="#{calculadoraBean.datos}" />
 			
